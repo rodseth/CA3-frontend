@@ -1,21 +1,16 @@
 import "../styles/App.css";
 import "../styles/Navbar.css";
 import React from "react";
-import {
-  Switch,
-  Route,
-  NavLink,
-  Redirect,
-} from "react-router-dom";
+import { Switch, Route, NavLink, Redirect } from "react-router-dom";
 import { Login } from "./Login";
 import Home from "./Home";
 import Example from "../components/Example";
 import Admin from "./Admin";
 import Register from "./Register";
-import NoMatch from "./NoMatch"
+import NoMatch from "./NoMatch";
+import StarWars from "../components/StarWars";
 
 export default function Header({ isLoggedIn, setLoginStatus, loginMsg }) {
-
   let user = isLoggedIn ? `Logged in as: ${localStorage.getItem("user")}` : "";
   let roles = isLoggedIn ? `Roles: ${localStorage.getItem("roles")}` : "";
 
@@ -32,6 +27,11 @@ export default function Header({ isLoggedIn, setLoginStatus, loginMsg }) {
             <li>
               <NavLink activeClassName="active" to="/example">
                 Example
+              </NavLink>
+            </li>
+            <li>
+              <NavLink activeClassName="active" to="/starwars">
+                StarWars
               </NavLink>
             </li>
           </React.Fragment>
@@ -67,7 +67,7 @@ export default function Header({ isLoggedIn, setLoginStatus, loginMsg }) {
       </ul>
 
       <Switch>
-      {/* for deployment */}
+        {/* for deployment */}
         <Route path="/ca3-startcode">
           <Redirect to="/" />
         </Route>
@@ -76,6 +76,9 @@ export default function Header({ isLoggedIn, setLoginStatus, loginMsg }) {
         </Route>
         <Route path="/example">
           <Example />
+        </Route>
+        <Route path="/starwars">
+          <StarWars />
         </Route>
         <Route path="/admin">
           <Admin />
@@ -91,7 +94,7 @@ export default function Header({ isLoggedIn, setLoginStatus, loginMsg }) {
           <Register />
         </Route>
         <Route>
-         <NoMatch />
+          <NoMatch />
         </Route>
       </Switch>
     </div>

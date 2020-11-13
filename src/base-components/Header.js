@@ -68,6 +68,9 @@ export default function Header({ isLoggedIn, setLoginStatus, loginMsg }) {
 
       <Switch>
         {/* for deployment */}
+        <Route path="/ca3">
+          <Redirect to="/" />
+        </Route>
         <Route path="/ca3-startcode">
           <Redirect to="/" />
         </Route>

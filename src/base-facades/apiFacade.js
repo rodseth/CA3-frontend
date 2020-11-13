@@ -1,4 +1,4 @@
-import { URL } from "../base-components/Home";
+import { URL } from "../base-components/Login";
 
 export function handleHttpErrors(res) {
   if (!res.ok) {

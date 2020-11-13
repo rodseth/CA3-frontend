@@ -1,16 +1,16 @@
 import { useState } from "react";
-import starWarsFacade from "../facades/starWarsFacade";
+import facade from "../facades/starWarsFacade";
 
 export default function StarWars() {
   const [example, setExample] = useState({});
   const handleClick = (e) => {
     e.preventDefault();
-    starWarsFacade.starWarsMethod1().then((data) => setExample(data));
+    facade.getStarWarsQuote().then((data) => setExample(data));
   };
   return (
     <div>
-      <h1>Example</h1>
-      <p>Click the button to get some random data from various APIs</p>
+      <h1>Star Wars</h1>
+      <p>Click to get a quote</p>
       <button onClick={handleClick} className="btn btn-secondary">
         Click me
       </button>

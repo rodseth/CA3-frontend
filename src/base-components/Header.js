@@ -31,7 +31,7 @@ export default function Header({ isLoggedIn, setLoginStatus, loginMsg }) {
             </li>
             <li>
               <NavLink activeClassName="active" to="/starwars">
-                StarWars
+                Star Wars
               </NavLink>
             </li>
           </React.Fragment>

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import apiFacade from "../base-facades/apiFacade";
-import {URL} from "./Home";
+import {URL} from "./Login";
 
 export default function Register() {
+    
     const initialState = { username: "", password: "" };
     const [user, setUser] = useState(initialState);
     const [error, setError] = useState("");

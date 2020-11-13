@@ -1,14 +1,14 @@
-import { URL } from "../base-components/Home";
+import { URL } from "../base-components/Login";
 import apiFacade, { handleHttpErrors } from "../base-facades/apiFacade";
 
 const starWarsFacade = () => {
-
-    const starWarsMethod1 = () => {
-        return fetch(URL + "/api/starWars", apiFacade.makeOptions("GET", true))
+    
+    const getStarWarsQuote = () => {
+        return fetch(URL + "/api/starwars", apiFacade.makeOptions("GET", true))
             .then(handleHttpErrors);
     };
 
-    return { starWarsMethod1 };
+    return { getStarWarsQuote };
 };
 
 const facade = starWarsFacade();

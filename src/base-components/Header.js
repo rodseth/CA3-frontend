@@ -71,7 +71,7 @@ export default function Header({ isLoggedIn, setLoginStatus, loginMsg }) {
         <Route path="/ca3">
           <Redirect to="/" />
         </Route>
-        <Route path="/ca3-startcode">
+        <Route path="/startcode-ca3">
           <Redirect to="/" />
         </Route>
         <Route exact path="/">

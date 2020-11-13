@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DIRECTORY="ca3" # Directory name
+DIRECTORY="startcode-ca3" # Directory name
 DROPLET_URL="haevven.com" # Your own URL
 
 echo "##############################"

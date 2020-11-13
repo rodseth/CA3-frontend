@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import apiFacade from "../base-facades/apiFacade";
-import {URL} from "./Login";
+import {URL} from "./Home";
 
 export default function Register() {
     

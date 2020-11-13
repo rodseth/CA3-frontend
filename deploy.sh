@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DIRECTORY="starwars" # Directory name
+DIRECTORY="ca3" # Directory name
 DROPLET_URL="haevven.com" # Your own URL
 
 echo "##############################"

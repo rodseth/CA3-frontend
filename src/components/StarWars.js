@@ -11,7 +11,7 @@ export default function StarWars() {
   return (
     <div>
       <br/>
-      <img src={starwars} alt="logo" />
+      <img src={starwars} className="img-fluid" alt="logo" />
       <br/>
       <button onClick={handleClick} className="btn btn-secondary">
         May the Force be with you

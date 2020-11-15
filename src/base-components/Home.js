@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div>
       <h1>Welcome to this simple page</h1>
-      <img src={starwars} alt="logo" />
+      <img src={starwars} className="img-fluid" alt="logo" />
       <p>When logged in you can enjoy a variety of random Star Wars quotes by clicking a button</p>
       <br /><br />
     </div>

@@ -4,7 +4,6 @@ import React from "react";
 import { Switch, Route, NavLink, Redirect } from "react-router-dom";
 import { Login } from "./Login";
 import Home from "./Home";
-import Example from "../components/Example";
 import Admin from "./Admin";
 import Register from "./Register";
 import NoMatch from "./NoMatch";
@@ -24,11 +23,6 @@ export default function Header({ isLoggedIn, setLoginStatus, loginMsg }) {
         </li>
         {isLoggedIn && (
           <React.Fragment>
-            <li>
-              <NavLink activeClassName="active" to="/example">
-                Example
-              </NavLink>
-            </li>
             <li>
               <NavLink activeClassName="active" to="/starwars">
                 Star Wars
@@ -71,14 +65,11 @@ export default function Header({ isLoggedIn, setLoginStatus, loginMsg }) {
         <Route path="/ca3">
           <Redirect to="/" />
         </Route>
-        <Route path="/startcode-ca3">
+        {/* <Route path="/startcode-ca3">
           <Redirect to="/" />
-        </Route>
+        </Route> */}
         <Route exact path="/">
           <Home />
-        </Route>
-        <Route path="/example">
-          <Example />
         </Route>
         <Route path="/starwars">
           <StarWars />
